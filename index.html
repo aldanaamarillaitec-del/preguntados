@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>El Preguntado - Trivia</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <!-- ==============================
+             ENCABEZADO
+        =============================== -->
+
+        <header>
+
+            <h1>
+                <i class="fa-solid fa-bullseye"></i>
+                El Preguntado
+            </h1>
+
+            <p>
+                Juego de trivia con diferentes asignaturas
+            </p>
+
+        </header>
+
+
+        <!-- ==============================
+             MENÚ
+        =============================== -->
+
+        <section id="menu" class="pantalla">
+
+            <h2>
+                Elegí una asignatura
+            </h2>
+
+            <p class="subtitulo">
+                Poné a prueba tus conocimientos
+            </p>
+
+
+            <div class="materias">
+
+                <button
+                    class="materia matematica"
+                    data-materia="Matemática"
+                >
+                    <i class="fa-solid fa-calculator"></i>
+                    <span>Matemática</span>
+                </button>
+
+
+                <button
+                    class="materia historia"
+                    data-materia="Historia"
+                >
+                    <i class="fa-solid fa-landmark"></i>
+                    <span>Historia</span>
+                </button>
+
+
+                <button
+                    class="materia geografia"
+                    data-materia="Geografía"
+                >
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <span>Geografía</span>
+                </button>
+
+
+                <button
+                    class="materia ciencias"
+                    data-materia="Ciencias"
+                >
+                    <i class="fa-solid fa-flask"></i>
+                    <span>Ciencias</span>
+                </button>
+
+
+                <button
+                    class="materia lengua"
+                    data-materia="Lengua"
+                >
+                    <i class="fa-solid fa-book"></i>
+                    <span>Lengua</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             JUEGO
+        =============================== -->
+
+        <section id="juego" class="pantalla oculto">
+
+            <!-- Información -->
+
+            <div class="informacion">
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <span>
+                        <small>Materia</small>
+                        <strong id="materiaActual">
+                            Materia
+                        </strong>
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <span>
+                        <small>Puntaje</small>
+                        <strong id="puntaje">
+                            0
+                        </strong>
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <span>
+                        <small>Vidas</small>
+                        <strong id="vidas">
+                            3
+                        </strong>
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Barra de progreso -->
+
+            <div class="barra-contenedor">
+
+                <div id="barraProgreso"></div>
+
+            </div>
+
+
+            <!-- Número de pregunta -->
+
+            <p id="numeroPregunta">
+                Pregunta 1 de 5
+            </p>
+
+
+            <!-- Pregunta -->
+
+            <div class="pregunta">
+
+                <div class="icono-pregunta">
+                    <i class="fa-solid fa-circle-question"></i>
+                </div>
+
+                <h2 id="textoPregunta">
+                    Pregunta
+                </h2>
+
+            </div>
+
+
+            <!-- Respuestas -->
+
+            <div
+                id="respuestas"
+                class="respuestas"
+            ></div>
+
+
+            <!-- Mensaje -->
+
+            <p id="mensaje"></p>
+
+
+            <!-- Botón siguiente -->
+
+            <button
+                id="siguiente"
+                class="boton-siguiente oculto"
+            >
+                Siguiente
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </section>
+
+
+        <!-- ==============================
+             RESULTADO
+        =============================== -->
+
+        <section
+            id="resultado"
+            class="pantalla oculto"
+        >
+
+            <div class="trofeo">
+
+                <i class="fa-solid fa-trophy"></i>
+
+            </div>
+
+
+            <h2>
+                ¡Juego terminado!
+            </h2>
+
+
+            <p class="resultado-subtitulo">
+                Estos son tus resultados
+            </p>
+
+
+            <div class="resultado-card">
+
+                <p>
+                    Tu puntaje final
+                </p>
+
+
+                <div
+                    id="puntajeFinal"
+                    class="puntaje-final"
+                >
+                    0
+                </div>
+
+
+                <div class="separador"></div>
+
+
+                <p id="mensajeFinal">
+                </p>
+
+            </div>
+
+
+            <button
+                id="volver"
+                class="boton-principal"
+            >
+
+                <i class="fa-solid fa-rotate-right"></i>
+
+                Volver a jugar
+
+            </button>
+
+        </section>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
